@@ -1,5 +1,6 @@
 class OopsBannerApp{
     public static main(String args[]){
-        System.out.println("Hello");
+        //print oops to console
+        System.out.println("oops");
     }
 }
