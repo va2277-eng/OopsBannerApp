@@ -1,46 +1,21 @@
-public class OOPSBannerUC3 {
+class OOPSBannerApp4 {
+    static void main(String[] args) {
 
-    public static void main(String[] args) {
+        // Define array with 7 lines (7-line banner format)
+        String[] lines = new String[7];
 
-        String row1 = String.join("  ",
-                "O   O",
-                "O   O",
-                "PPPP ",
-                "SSSS "
-        );
+        // Populate banner lines for "OOPS"
+        lines[0] = String.join(" ", " ***** ", " ***** ", " ***** ", " ***** ");
+        lines[1] = String.join(" ", "*     *", "*     *", "*     *", "*      ");
+        lines[2] = String.join(" ", "*     *", "*     *", "*     *", "*      ");
+        lines[3] = String.join(" ", "*     *", "*     *", " ***** ", " ***** ");
+        lines[4] = String.join(" ", "*     *", "*     *", "*      ", "     * ");
+        lines[5] = String.join(" ", "*     *", "*     *", "*      ", "*     *");
+        lines[6] = String.join(" ", " ***** ", " ***** ", "*      ", " ***** ");
 
-        String row2 = String.join("  ",
-                "O   O",
-                "O   O",
-                "P   P",
-                "S    "
-        );
-
-        String row3 = String.join("  ",
-                "O   O",
-                "O   O",
-                "PPPP ",
-                " SSS "
-        );
-
-        String row4 = String.join("  ",
-                "O   O",
-                "O   O",
-                "P    ",
-                "    S"
-        );
-
-        String row5 = String.join("  ",
-                " OOO ",
-                " OOO ",
-                "P    ",
-                "SSSS "
-        );
-
-        System.out.println(row1);
-        System.out.println(row2);
-        System.out.println(row3);
-        System.out.println(row4);
-        System.out.println(row5);
+        // Print using for-each loop
+        for (String line : lines) {
+            System.out.println(line);
+        }
     }
 }
