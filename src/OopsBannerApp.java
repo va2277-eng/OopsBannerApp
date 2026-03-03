@@ -1,21 +1,60 @@
-class OOPSBannerApp5 {
+public class OOPSBannerApp {
 
-    static void main(String[] args) {
-
-        // Define and populate the banner lines at declaration
-        String[] lines = {
-            String.join(" ", "  *****  ", "  *****  ", "  *****  ", "  *****  "),
-            String.join(" ", " *     * ", " *     * ", " *     * ", " *       "),
-            String.join(" ", "*       *", "*     *  ", "*     *  ", " *       "),
-            String.join(" ", "*       *", " *     * ", "  *****  ", "  *****  "),
-            String.join(" ", "*       *", " *     * ", " *       ", "      *  "),
-            String.join(" ", " *     * ", " *     * ", " *       ", " *     * "),
-            String.join(" ", "  *****  ", "  *****  ", " *       ", "  *****  ")
+    // Method to generate the pattern for the letter 'O'
+    public static String[] getOPattern() {
+        return new String[] {
+            "  *  ",
+            " *   * ",
+            " *   * ",
+            " *   * ",
+            " *   * ",
+            " *   * ",
+            "  *  "
         };
+    }
 
-        // Print using for-each loop
-        for (String line : lines) {
-            System.out.println(line);
+    // Method to generate the pattern for the letter 'P'
+    public static String[] getPPattern() {
+        return new String[] {
+            " *** ",
+            " *    *",
+            " *    *",
+            " *** ",
+            " *     ",
+            " *     ",
+            " *     "
+        };
+    }
+
+    // Method to generate the pattern for the letter 'S'
+    public static String[] getSPattern() {
+        return new String[] {
+            "  ** ",
+            " *     ",
+            " *     ",
+            "  *  ",
+            "     * ",
+            "     * ",
+            " **  "
+        };
+    }
+
+    // Main method to run the banner display
+    public static void main(String[] args) {
+        
+        // Step 2: Call methods to get the patterns and store them in String arrays
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
+
+        // Step 3: Use a loop to assemble and print each line of the banner "OOPS"
+        // Note: All patterns must have the same number of rows (length)
+        for (int i = 0; i < oPattern.length; i++) {
+            // Concatenate the i-th line of each letter with spaces in between
+            System.out.println(oPattern[i] + "  " + 
+                               oPattern[i] + "  " + 
+                               pPattern[i] + "  " + 
+                               sPattern[i]);
         }
     }
 }
